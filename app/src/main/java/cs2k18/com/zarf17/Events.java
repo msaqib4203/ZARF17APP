@@ -29,6 +29,7 @@ public class Events extends DrawerActivity {
         setTitle("");
         ButterKnife.bind(this);
 
+
         final Toolbar toolbar = mViewPager.getToolbar();
         if (toolbar != null) {
             setSupportActionBar(toolbar);
@@ -49,13 +50,16 @@ public class Events extends DrawerActivity {
 
             @Override
             public CharSequence getPageTitle(int position) {
+
                 return events_category[position % 4];
+
             }
         });
-
+        final View logo = findViewById(R.id.logo_white);
         mViewPager.setMaterialViewPagerListener(new MaterialViewPager.Listener() {
             @Override
             public HeaderDesign getHeaderDesign(int page) {
+
                 return HeaderDesign.fromColorResAndUrl(color_id[page], getString(url_string[page]));
             }
         });
@@ -63,7 +67,7 @@ public class Events extends DrawerActivity {
         mViewPager.getViewPager().setOffscreenPageLimit(mViewPager.getViewPager().getAdapter().getCount());
         mViewPager.getPagerTitleStrip().setViewPager(mViewPager.getViewPager());
 
-        final View logo = findViewById(R.id.logo_white);
+
         if (logo != null) {
             logo.setOnClickListener(new View.OnClickListener() {
                 @Override
