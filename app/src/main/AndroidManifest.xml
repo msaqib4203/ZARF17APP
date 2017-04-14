@@ -3,6 +3,8 @@
     package="cs2k18.com.zarf17">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -40,7 +42,7 @@
         android:name=".OurTeam"
         android:label="Our Team"
         android:parentActivityName=".MainActivity"
-        android:theme="@style/AppTheme.NoActionBar" />
+        android:theme="@style/AppTheme.Base" />
         <service android:name=".MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />

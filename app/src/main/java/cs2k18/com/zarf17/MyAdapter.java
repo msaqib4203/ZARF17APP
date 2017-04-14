@@ -5,8 +5,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -38,11 +39,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(final MyViewHolder myViewHolder, final int position) {
-        //myViewHolder.title.setText(members.get(position).name);
+
         myViewHolder.designation.setText(members.get(position).post);
         myViewHolder.title.setText(members.get(position).name);
         myViewHolder.contact_info.setText(members.get(position).contact);
-        //myViewHolder.photo.(members.get(position).url);
+        Picasso.with(context).load(members.get(position).url).placeholder(R.drawable.blank_dp).into(myViewHolder.photo);
     }
 
     @Override
@@ -54,17 +55,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         TextView title;
         TextView designation;
         CircleImageView photo;
-        ImageView imageView;
         TextView contact_info;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.faculty_name);
             designation = (TextView) itemView.findViewById(R.id.designation);
-            photo = (CircleImageView) itemView.findViewById(R.id.photo);
+            photo = (CircleImageView) itemView.findViewById(R.id.team_photo);
             contact_info = (TextView) itemView.findViewById(R.id.contact_no);
-
-            //  pbar = (ProgressBar)itemView.findViewById(R.id.imageprogress);
         }
     }
 }
