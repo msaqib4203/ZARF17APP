@@ -1,71 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <android.support.v7.widget.CardView
+        android:id="@+id/fmember"
         android:layout_width="match_parent"
-        app:contentPaddingLeft="1dp"
+        android:layout_height="100dp"
         android:paddingRight="1dp"
         android:paddingTop="1dp"
         app:cardBackgroundColor="#F7F9FB"
         app:cardCornerRadius="5dp"
-        android:id="@+id/fmember"
         app:cardElevation="1dp"
         app:cardUseCompatPadding="true"
-        android:layout_height="100dp">
+        app:contentPaddingLeft="1dp">
 
             <RelativeLayout
+                android:id="@+id/layout1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/layout1">
+                android:layout_height="73dp">
                 <de.hdodenhof.circleimageview.CircleImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/photo"
                     android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_marginLeft="5dp"
-                    android:paddingTop="3dp"
+                    android:layout_marginRight="20dp"
                     android:paddingBottom="3dp"
                     android:paddingLeft="3dp"
                     android:paddingRight="3dp"
-                    android:transitionName="display_picture"
-                    android:layout_height="60dp"
-                    android:layout_marginRight="20dp" />
+                    android:paddingTop="3dp"
+                    android:transitionName="display_picture" />
 
             <TextView
+                android:id="@+id/faculty_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="1dp"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/photo"
+                android:layout_toRightOf="@+id/photo"
                 android:fontFamily="sans-serif-condensed"
                 android:paddingBottom="2dp"
                 android:paddingLeft="2dp"
                 android:paddingRight="2dp"
-                android:id="@+id/faculty_name"
-                android:textSize="20sp"
-                android:textColor="#000000"
+                android:paddingTop="1dp"
                 android:text="Title"
-                android:transitionName="title"
-                android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/photo"
-                android:layout_toRightOf="@+id/photo"/>
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:transitionName="title" />
             <TextView
+                android:id="@+id/designation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="3dp"
+                android:layout_alignLeft="@+id/faculty_name"
+                android:layout_alignStart="@+id/faculty_name"
+                android:layout_below="@+id/faculty_name"
+                android:fontFamily="sans-serif-thin"
                 android:paddingBottom="3dp"
                 android:paddingLeft="2dp"
-                android:textSize="16sp"
                 android:paddingRight="2dp"
-                android:id="@+id/designation"
-                android:textColor="#B0B9B0"
+                android:paddingTop="3dp"
                 android:text="Uploaded By"
-                android:fontFamily="sans-serif-thin"
-                android:textStyle="bold"
-                android:layout_below="@+id/faculty_name"
-                android:layout_alignStart="@+id/faculty_name"
-                android:layout_alignLeft="@+id/faculty_name"/>
+                android:textColor="#B0B9B0"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/phone_icon"
+                    android:layout_width="32px"
+                    android:layout_height="32px"
+                    android:layout_alignLeft="@id/designation"
+                    android:layout_alignStart="@id/designation"
+                    android:layout_below="@id/designation"
+                    android:src="@drawable/phone" />
+
+                <TextView
+                    android:id="@+id/contact_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@id/designation"
+                    android:layout_alignRight="@id/phone_icon"
+                    android:layout_below="@id/designation"
+                    android:text="Contsct no" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

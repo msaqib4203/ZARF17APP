@@ -8,10 +8,13 @@ public class Member {
 
     public String name;
     public String post;
-    public int url;
-    Member(String a,String b,int c){
+    public String url;
+    public String contact;
+
+    Member(String a, String b, int c, String d) {
         this.name = a;
         this.post = b;
-        this.url = c;
+        this.url = "http://msaqib.gq/team/" + String.valueOf(c) + ".jpg";
+        this.contact = d;
     }
 }

@@ -1,11 +1,11 @@
 package cs2k18.com.zarf17;
 
 import android.content.Context;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -15,13 +15,13 @@ import de.hdodenhof.circleimageview.CircleImageView;
 /**
  * Created by MSaqib on 26-10-2016.
  */
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
+public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.MyViewHolder> {
 
         Context context;
         ArrayList<Member>members;
         LayoutInflater inflater;
 
-        public MyAdapter(Context context, ArrayList<Member> members) {
+    public TeamAdapter(Context context, ArrayList<Member> members) {
 
             this.context = context;
             this.members = members;
@@ -41,6 +41,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             //myViewHolder.title.setText(members.get(position).name);
             myViewHolder.designation.setText(members.get(position).post);
             myViewHolder.title.setText(members.get(position).name);
+            myViewHolder.contact_info.setText(members.get(position).contact);
             //myViewHolder.photo.(members.get(position).url);
         }
 
@@ -53,13 +54,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             TextView title;
             TextView designation;
             CircleImageView photo;
-            CardView cardView;
+            ImageView imageView;
+            TextView contact_info;
 
             public MyViewHolder(View itemView) {
                 super(itemView);
                 title = (TextView) itemView.findViewById(R.id.faculty_name);
                 designation = (TextView) itemView.findViewById(R.id.designation);
                 photo = (CircleImageView) itemView.findViewById(R.id.photo);
+                contact_info = (TextView) itemView.findViewById(R.id.contact_no);
+
               //  pbar = (ProgressBar)itemView.findViewById(R.id.imageprogress);
             }
         }
