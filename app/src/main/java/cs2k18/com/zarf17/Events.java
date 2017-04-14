@@ -16,9 +16,10 @@ import butterknife.ButterKnife;
 public class Events extends DrawerActivity {
 
 
-    public String events_category[] = {"Online", "Technical", "Cultural", "Literary"};
-    public int color_id[] = {R.color.green, R.color.blue, R.color.cyan, R.color.red};
-    public int url_string[] = {R.string.url1, R.string.url2, R.string.url3, R.string.url4};
+    public String events_category[] = {"Online", "Technical", "Cultural", "Literary", "Sports"};
+    public int color_id[] = {R.color.green, R.color.blue, R.color.cyan, R.color.red, R.color.lime};
+    public int url_string[] = {R.string.url1, R.string.url2, R.string.url3, R.string.url4,
+            R.string.url5};
     @BindView(R.id.materialViewPager)
     MaterialViewPager mViewPager;
 
@@ -45,13 +46,13 @@ public class Events extends DrawerActivity {
 
             @Override
             public int getCount() {
-                return 4;
+                return 5;
             }
 
             @Override
             public CharSequence getPageTitle(int position) {
 
-                return events_category[position % 4];
+                return events_category[position % 5];
 
             }
         });
