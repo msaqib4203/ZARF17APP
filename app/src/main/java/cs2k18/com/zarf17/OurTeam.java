@@ -1,7 +1,9 @@
 package cs2k18.com.zarf17;
 
 
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -13,8 +15,6 @@ import java.util.ArrayList;
  */
 
 public class OurTeam extends AppCompatActivity {
-
-
     static ArrayList<Member> members = new ArrayList<>();
     public String names[] = {"Mohannad Ali Khan","Shahbaz Ahmad","Shivani Shrotriya","Madiha Mariyam","Mohd. Shavez Khan",
             "Mohd. Yaqzan","Mohd. Faisal Noor","Saiful Wali Khan","Taha Waseem",
@@ -33,6 +33,7 @@ public class OurTeam extends AppCompatActivity {
             R.drawable.team_20, R.drawable.team_21};
     RecyclerView recyclerView;
     MyAdapter myAdapter;
+    @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
