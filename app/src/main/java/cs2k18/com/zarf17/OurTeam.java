@@ -38,13 +38,10 @@ public class OurTeam extends AppCompatActivity {
             members.add(new Member(names[i], post[i], i + 1, mob[i]));
         }
         setContentView(R.layout.ourteam);
-        //getSupportActionBar().setHomeButtonEnabled(true);
         recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(),1,false));
         myAdapter = new TeamAdapter(OurTeam.this, members);
         recyclerView.setAdapter(myAdapter);
-
-      //  makeSnack();
     }
 }
 
