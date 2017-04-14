@@ -3,8 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ZARF17.iml" filepath="$PROJECT_DIR$/ZARF17.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ZARF17-master.iml" filepath="$PROJECT_DIR$/ZARF17-master.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ZARF17APP.iml" filepath="$PROJECT_DIR$/ZARF17APP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZARFAPP.iml" filepath="$PROJECT_DIR$/ZARFAPP.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
