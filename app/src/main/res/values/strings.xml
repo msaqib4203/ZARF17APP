@@ -24,6 +24,86 @@
         <item>https://msaqib.000webhostapp.com/events/volleyball.jpg</item>
     </string-array>
 
+    <string-array name="sports_events2">
+        <item>Badminton</item>
+        <item>Basketball</item>
+        <item>Cricket</item>
+        <item>Football</item>
+        <item>Table Tennis</item>
+        <item>Tug of War</item>
+        <item>Volleyball</item>
+    </string-array>
+
+    <string-array name="tech_events">
+        <item>https://msaqib.000webhostapp.com/events/paper_presentation.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/chem_e_car.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/lan_gaming.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/civil_quiz.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/codista_2.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/IPR_Logo_quiz.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/ipl_action.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/B_Quiz.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Mad_Ad.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/B_Plan.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Chem_quiz.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Line_Follower.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Electro_Quiz.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Tech_Race.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Social_Conscious_Energy.jpg</item>
+    </string-array>
+
+    <string-array name="literary_events">
+        <item>https://msaqib.000webhostapp.com/events/Debate.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/General_Quiz.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Creative_Writing.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/ZHCETtalks.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Mathlete.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Calligraphy.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Islamic_Quiz.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Turn_Coat.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Slam_Poetry.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Decalamation.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Tweetech.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/ZHCET_Thank_You_Notes.jpg</item>
+    </string-array>
+
+    <string-array name="online_events">
+        <item>https://msaqib.000webhostapp.com/events/Class_ka_Dealer.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Hero_and_Heroine.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Squad.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Caught_with_Proxy.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Late_to_class.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Woh_Ajnabee.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Post_with_min_likes.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Selfie_Master.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Candid_Photography.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/AMU_Favourite_Campus_Place.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Night_Photography.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Microtales.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Most_no_of_people_in_a_selfie.jpg</item>
+    </string-array>
+
+    <string-array name="cultural_events">
+        <item>https://msaqib.000webhostapp.com/events/jigar.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/shooting.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/bingo.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/tug_of_war.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Fast_and_Furious.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Bullet_Raja.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Firing_Squad.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Bazar_e_Zarf.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Cosplan.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Vezeto.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Ad_Mad.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Treasure_Hunt.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Best_Buddy.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Aqua_Torpedo.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Soduko.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Rangoli_Making.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Dumb_Charades.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/Solo_Singing.jpg</item>
+    </string-array>
+
     <string name="url1">http://blog.meraevents.com/wp-content/uploads/2015/10/Photography-b.jpg</string>
     <string name="url2">http://i0.wp.com/eventmagazine.townscript.com/wp-content/uploads/2016/04/workshops11.png?fit=1080%2C9999</string>
     <string name="url3">http://cbit.ac.in/files/synapse/dance.jpg</string>
