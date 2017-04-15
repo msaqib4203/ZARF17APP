@@ -43,6 +43,12 @@
         android:label="Our Team"
         android:parentActivityName=".MainActivity"
         android:theme="@style/AppTheme.Base" />
+        <activity android:name=".TabActivity">
+            <intent-filter>
+                <action android:name="notifc_TARGET"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
         <service android:name=".MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />

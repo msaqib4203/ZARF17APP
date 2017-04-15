@@ -5,13 +5,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Toast;
 
 import com.github.florent37.materialviewpager.MaterialViewPager;
 import com.github.florent37.materialviewpager.header.HeaderDesign;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import me.grantland.widget.AutofitTextView;
 
 public class Events extends DrawerActivity {
 
@@ -57,11 +57,13 @@ public class Events extends DrawerActivity {
 
             }
         });
+
         final View logo = findViewById(R.id.logo_white);
         mViewPager.setMaterialViewPagerListener(new MaterialViewPager.Listener() {
             @Override
             public HeaderDesign getHeaderDesign(int page) {
-
+                final AutofitTextView textView = (AutofitTextView) findViewById(R.id.logo_white);
+                textView.setText(events_category[page].toUpperCase() + " EVENTS");
                 return HeaderDesign.fromColorResAndUrl(color_id[page], getString(url_string[page]));
             }
         });
@@ -75,7 +77,7 @@ public class Events extends DrawerActivity {
                 @Override
                 public void onClick(View v) {
                     mViewPager.notifyHeaderChanged();
-                    Toast.makeText(getApplicationContext(), "Yes, the title is clickable", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(), "Yes, the title is clickable", Toast.LENGTH_SHORT).show();
                 }
             });
         }
