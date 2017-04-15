@@ -5,6 +5,7 @@ package cs2k18.com.zarf17;
  */
 
 import android.content.Context;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -97,8 +98,8 @@ public class DevAdapter extends RecyclerView.Adapter<DevAdapter.MyViewHolder> {
         ImageView imageViewExpand;
         ViewGroup linearLayoutDetails;
         LinearLayout linearLayout;
-        ImageView facebook_button;
-        ImageView github_button;
+        FloatingActionButton facebook_button;
+        FloatingActionButton github_button;
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -107,8 +108,8 @@ public class DevAdapter extends RecyclerView.Adapter<DevAdapter.MyViewHolder> {
             linearLayoutDetails = (ViewGroup) itemView.findViewById(R.id.linearLayoutDetails);
             imageViewExpand = (ImageView) itemView.findViewById(R.id.imageViewExpand);
             linearLayout = (LinearLayout) itemView.findViewById(R.id.toggler_layout);
-            facebook_button = (ImageView) itemView.findViewById(R.id.dev_facebook);
-            github_button = (ImageView) itemView.findViewById(R.id.dev_github);
+            facebook_button = (FloatingActionButton) itemView.findViewById(R.id.dev_facebook);
+            github_button = (FloatingActionButton) itemView.findViewById(R.id.dev_github);
         }
     }
 }

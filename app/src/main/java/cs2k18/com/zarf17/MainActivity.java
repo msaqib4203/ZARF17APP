@@ -3,9 +3,12 @@ package cs2k18.com.zarf17;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -18,7 +21,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
@@ -26,22 +31,26 @@ import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.gjiazhe.panoramaimageview.GyroscopeObserver;
 import com.gjiazhe.panoramaimageview.PanoramaImageView;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 /** mergin test by msaqib*/
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    EditText email_msg = null, name_msg = null, feedback_msg = null;
+    PanoramaImageView panoramaImageView1;
+    CardView cardView1;
+    EditText name, contact, query;
+    AlertDialog.Builder builder;
+    SliderLayout mDemoSlider;
     private TextView txtTimerDay, txtTimerHour, txtTimerMinute, txtTimerSecond;
     private TextView tvEvent;
     private Handler handler;
     private Runnable runnable;
-
-    PanoramaImageView panoramaImageView1;
-    CardView cardView1,cardView2,cardView3;
-    AlertDialog.Builder builder;
     private GyroscopeObserver gyroscopeObserver;
-    SliderLayout mDemoSlider;
 
     public void countDownStart() {
         handler = new Handler();
@@ -202,26 +211,32 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_developer) {
             startActivity(new Intent(this,Developers.class));
         } else if (id == R.id.nav_query) {
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            drawer.closeDrawer(GravityCompat.START);
             builder = new AlertDialog.Builder(this);
             LayoutInflater layoutInflater = getLayoutInflater();
             builder.setView(layoutInflater.inflate(R.layout.dialog_layout,null));
+            AlertDialog dialog = null;
+            //  EditText email_msg=null,name_msg=null,feedback_msg=null;
             builder.setPositiveButton("OK",
                     new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                           /* if(in.getText().toString().length()==0)
-                                dialog.dismiss();
-                            else {
-                                try{
-                                    String branches[] = {"none","ARB","CEB","KEB","PEB","EEB","LEB","MEB","PKB"};
-                                    b = branches[sp.getSelectedItemPosition()];
-                                }catch (Exception e){
-                                    b= "none";
-                                }
+
+                            String email, name, feedback;
+                            if (email_msg.getText().toString().trim().equals("")
+                                    || feedback_msg.getText().toString().trim().equals("") ||
+                                    name_msg.getText().toString().trim().equals("")) {
+                                CoordinatorLayout cd = (CoordinatorLayout) findViewById(R.id.cd);
+                                Snackbar.make(cd, "All fields are required", Snackbar.LENGTH_SHORT).show();
+                                return;
+                            } else {
+                                email = email_msg.getText().toString();
+                                name = name_msg.getText().toString();
+                                feedback = feedback_msg.getText().toString();
+                                new myTask(email, name, feedback).execute();
                             }
-                            q = in.getText().toString().toUpperCase();
-                            q=q.replaceAll(" ","+");
-                            //new myTask().execute();*/
+
                             dialog.dismiss();
                         }
                     });
@@ -233,14 +248,59 @@ public class MainActivity extends AppCompatActivity
                             dialog.dismiss();
                         }
                     });
-            AlertDialog dialog = builder.create();
+            dialog = builder.create();
             dialog.show();
-//            in = (EditText)dialog.findViewById(R.id.input);
-            //          sp = (Spinner)dialog.findViewById(R.id.sponner);
-            // if you can see this, its working
+            email_msg = (EditText) dialog.findViewById(R.id.query_contact);
+            name_msg = (EditText) dialog.findViewById(R.id.query_name);
+            feedback_msg = (EditText) dialog.findViewById(R.id.query_feedback);
+            return true;
+
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    private class myTask extends AsyncTask<Void, Void, Void> {
+
+        String name, email, feedback;
+        String response;
+        boolean success = true;
+        int count = -1;
+
+        public myTask(String a, String b, String c) {
+            this.name = a;
+            this.email = b;
+            this.feedback = c;
+        }
+
+        @Override
+        protected void onPreExecute() {
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            try {
+                Document doc = Jsoup.connect("https://msaqib.000webhostapp.com/events/query.php?name=" + name + "&contact=" + email +
+                        "&feedback=" + feedback).timeout(8000).get();
+                response = doc.outerHtml();
+
+            } catch (Exception e) {
+                success = false;
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+
+            if (success) {
+                Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
+            }
+            super.onPostExecute(aVoid);
+
+        }
+
+    }
 }
+

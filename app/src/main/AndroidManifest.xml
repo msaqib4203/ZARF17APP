@@ -36,7 +36,8 @@
     </activity>
     <activity android:name=".Developers"
         android:label="Developers"
-        android:parentActivityName=".MainActivity">
+        android:parentActivityName=".MainActivity"
+        android:theme="@style/AppTheme.Base">
     </activity>
     <activity
         android:name=".OurTeam"
@@ -59,6 +60,13 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_chat_black_24dp" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimaryDark" />
     </application>
 
 </manifest>

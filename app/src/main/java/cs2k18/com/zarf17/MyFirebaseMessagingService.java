@@ -29,8 +29,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         notificationBuilder.setContentTitle("Events Update");
         notificationBuilder.setContentText(remoteMessage.getNotification().getBody());
         notificationBuilder.setAutoCancel(true);
-        notificationBuilder.setSmallIcon(R.drawable.ic_menu_camera);
-        notificationBuilder.setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher));
+        notificationBuilder.setStyle(new NotificationCompat.BigTextStyle()
+                .bigText(remoteMessage.getNotification().getBody()));
+        notificationBuilder.setSmallIcon(R.drawable.ic_chat_black_24dp);
+        notificationBuilder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.ic_chat_black_24dp));
         notificationBuilder.setContentIntent(pendingIntent);
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(0,notificationBuilder.build());

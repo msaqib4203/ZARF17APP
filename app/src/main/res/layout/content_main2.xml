@@ -1,53 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_marginTop="40dp"
-    android:paddingTop="20dp"
     android:layout_height="wrap_content"
+    android:layout_marginTop="40dp"
     android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:paddingTop="20dp">
     <ScrollView
+        android:id="@+id/main_scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/main_scroll"
         >
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:background="#Eeeeee"
             android:id="@+id/activity_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="#Eeeeee"
             android:paddingBottom="10dp"
             android:paddingLeft="10dp"
-            android:animateLayoutChanges="true"
             android:paddingRight="10dp"
             android:paddingTop="10dp">
             <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
                 android:id="@+id/cardview1"
-                app:cardElevation="4dp"
-                app:cardCornerRadius="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_margin="2dp"
-                android:layout_height="wrap_content">
+                app:cardCornerRadius="2dp"
+                app:cardElevation="4dp">
                 <com.gjiazhe.panoramaimageview.PanoramaImageView
                     android:id="@+id/panorama_image_view1"
                     android:layout_width="match_parent"
                     android:layout_height="400dp"
                     android:layout_margin="5dp"
-                    android:src="@drawable/poster1"
+                    android:src="@drawable/qwertyui"
                     app:piv_enablePanoramaMode="true"
-                    app:piv_show_scrollbar="false"
-                    app:piv_invertScrollDirection="false"/>
+                    app:piv_invertScrollDirection="false"
+                    app:piv_show_scrollbar="false" />
             </android.support.v7.widget.CardView>
     <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
         android:id="@+id/cardview2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/cardview1"
-        app:cardElevation="4dp"
-        app:cardCornerRadius="2dp"
         android:layout_margin="2dp"
-        android:layout_height="wrap_content">
+        app:cardCornerRadius="2dp"
+        app:cardElevation="4dp">
             <LinearLayout
                 android:id="@+id/LinearLayout"
                 android:layout_width="wrap_content"
@@ -77,9 +76,9 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
                         android:gravity="center_horizontal"
                         android:text="Days"
-                        android:fontFamily="sans-serif-condensed"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textColor="#000"
                         android:textStyle="bold" />
@@ -108,9 +107,9 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
                         android:gravity="center_horizontal"
                         android:text="Hours"
-                        android:fontFamily="sans-serif-condensed"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textColor="#000"
                         android:textStyle="bold" />
@@ -139,9 +138,9 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
                         android:gravity="center_horizontal"
                         android:text="Minutes"
-                        android:fontFamily="sans-serif-condensed"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textColor="#000"
                         android:textStyle="bold" />
@@ -170,9 +169,9 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
                         android:gravity="center_horizontal"
                         android:text="Seconds"
-                        android:fontFamily="sans-serif-condensed"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textColor="#000"
                         android:textStyle="bold" />
@@ -180,18 +179,18 @@
             </LinearLayout>
     </android.support.v7.widget.CardView>
             <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
                 android:id="@+id/cardview3"
-                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/cardview2"
-                app:cardElevation="4dp"
+                android:layout_margin="5dp"
                 app:cardCornerRadius="4dp"
-                android:layout_height="wrap_content">
+                app:cardElevation="4dp">
                 <com.daimajia.slider.library.SliderLayout
                     android:id="@+id/slider"
-                    android:layout_margin="5dp"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp" />
+                    android:layout_height="200dp"
+                    android:layout_margin="5dp" />
             </android.support.v7.widget.CardView>
         </RelativeLayout>
     </ScrollView>
