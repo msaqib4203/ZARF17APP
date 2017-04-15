@@ -41,7 +41,7 @@
         <item>https://msaqib.000webhostapp.com/events/civil_quiz.jpg</item>
         <item>https://msaqib.000webhostapp.com/events/codista_2.jpg</item>
         <item>https://msaqib.000webhostapp.com/events/logo_quiz.jpg</item>
-        <item>https://msaqib.000webhostapp.com/events/ipl_action.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/ipl_auction.jpg</item>
         <item>https://msaqib.000webhostapp.com/events/b_quiz.jpg</item>
         <item>https://msaqib.000webhostapp.com/events/mad_ads.jpg</item>
         <item>https://msaqib.000webhostapp.com/events/B_Plan.jpg</item>
@@ -53,21 +53,21 @@
     </string-array>
 
     <string-array name="tech_events2">
-        <item>paper_presentation.jpg</item>
-        <item>chem_e_car.jpg</item>
-        <item>lan_gaming.jpg</item>
-        <item>civil_quiz.jpg</item>
-        <item>codista_2.jpg</item>
-        <item>logo_quiz.jpg</item>
-        <item>ipl_action.jpg</item>
-        <item>b_quiz.jpg</item>
-        <item>mad_ads.jpg</item>
-        <item>B_Plan.jpg</item>
-        <item>Chem_quiz.jpg</item>
-        <item>Line_Follower.jpg</item>
-        <item>Electro_Quiz.jpg</item>
-        <item>Tech_Race.jpg</item>
-        <item>Social_Conscious_Energy.jpg</item>
+        <item>Paper Presentation</item>
+        <item>Chem-e-Car</item>
+        <item>Lan Gaming</item>
+        <item>Civil Quiz</item>
+        <item>Codista 2.0</item>
+        <item>Logo Quiz</item>
+        <item>IPL Auction</item>
+        <item>B Quiz</item>
+        <item>Mad Ads</item>
+        <item>B Plan</item>
+        <item>Chem Quiz</item>
+        <item>Line Follower</item>
+        <item>Electro Quiz</item>
+        <item>Tech Race</item>
+        <item>Social Conscious Energy</item>
     </string-array>
 
     <string-array name="literary_events">
@@ -85,6 +85,21 @@
         <item>https://msaqib.000webhostapp.com/events/ZHCET_Thank_You_Notes.jpg</item>
     </string-array>
 
+    <string-array name="literary_events2">
+        <item>Debate</item>
+        <item>General Quiz</item>
+        <item>Creative Writing</item>
+        <item>ZHCETtalks</item>
+        <item>Mathlete</item>
+        <item>Calligraphy</item>
+        <item>Islamic Quiz</item>
+        <item>Turn Coat</item>
+        <item>Slam Poetry</item>
+        <item>Decalamation</item>
+        <item>Tweetech</item>
+        <item>ZHCET Thank You Notes</item>
+    </string-array>
+
     <string-array name="online_events">
         <item>https://msaqib.000webhostapp.com/events/Class_ka_Dealer.jpg</item>
         <item>https://msaqib.000webhostapp.com/events/Hero_and_Heroine.jpg</item>
@@ -99,6 +114,22 @@
         <item>https://msaqib.000webhostapp.com/events/Night_Photography.jpg</item>
         <item>https://msaqib.000webhostapp.com/events/Microtales.jpg</item>
         <item>https://msaqib.000webhostapp.com/events/Most_no_of_people_in_a_selfie.jpg</item>
+    </string-array>
+
+    <string-array name="online_events2">
+        <item>Class ka Dealer</item>
+        <item>Hero and Heroine</item>
+        <item>Squad of the Year</item>
+        <item>Caught with Proxy</item>
+        <item>Late to Class</item>
+        <item>Woh Ajnabee</item>
+        <item>Post with minimum likes</item>
+        <item>Selfie Master</item>
+        <item>Candid Photography</item>
+        <item>AMU Favourite Campus Place</item>
+        <item>Night Photography</item>
+        <item>Microtales</item>
+        <item>Most no of people in a selfie</item>
     </string-array>
 
     <string-array name="cultural_events">
@@ -120,6 +151,27 @@
         <item>https://msaqib.000webhostapp.com/events/Rangoli_Making.jpg</item>
         <item>https://msaqib.000webhostapp.com/events/Dumb_Charades.jpg</item>
         <item>https://msaqib.000webhostapp.com/events/Solo_Singing.jpg</item>
+    </string-array>
+
+    <string-array name="cultural_events2">
+        <item>Jigar</item>
+        <item>Shooting</item>
+        <item>Bingo</item>
+        <item>Tug of war</item>
+        <item>Fast and Furious</item>
+        <item>Bullet Raja</item>
+        <item>Firing Squad</item>
+        <item>Bazaar-e-Zarf</item>
+        <item>Cosplan</item>
+        <item>Vezeto</item>
+        <item>Ad Mads</item>
+        <item>Treasure Hunt</item>
+        <item>Best Buddy</item>
+        <item>Aqua Torpedo</item>
+        <item>Soduko</item>
+        <item>Rangoli Making</item>
+        <item>Dumb Charades</item>
+        <item>Solo Singing</item>
     </string-array>
 
     <string name="url1">http://blog.meraevents.com/wp-content/uploads/2015/10/Photography-b.jpg</string>

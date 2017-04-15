@@ -16,8 +16,8 @@ import java.util.ArrayList;
 
 public class OurTeam extends AppCompatActivity {
     static ArrayList<Member> members = new ArrayList<>();
-    public String names[] = {"Mohannad Ali Khan","Shahbaz Ahmad","Shivani Shrotriya","Madiha Mariyam","Mohd. Shavez Khan",
-            "Mohd. Yaqzan","Mohd. Faisal Noor","Saiful Wali Khan","Taha Waseem",
+    public String names[] = {"Mohannad Ali Khan","Shahbaz Ahmad","Shivani Shrotriya","Madiha Mariyam",
+            "Mohd. Faisal Noor","Saiful Wali Khan","Mohd. Shavez Khan","Mohd. Yaqzan","Taha Waseem",
             "Mohd. Zubair","Anas Abdullah","Iffat Alam","Mohd. Bilal Khan Sherwani","Saiful Haque","Mohd. Amir Khan",
             "Mohd. Faizan","Kunaal Khemani","Danish Khan","Arsam Naim","Zeeshan Shahab","Osama Aslam"};
     public String post[] = {"Convener","Co-Convener","Girl's Coordinator","Girl's Co-Coordinator","Cultural Coordinator","Cultural Co-Coordinator",

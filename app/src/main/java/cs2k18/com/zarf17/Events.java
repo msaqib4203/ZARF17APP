@@ -44,10 +44,18 @@ public class Events extends DrawerActivity {
             @Override
             public Fragment getItem(int position) {
                 switch (position % 5) {
+                    case 0:
+                        return OnlineFragment.newInstance();
+                    case 1:
+                        return TechnicalFragment.newInstance();
+                    case 2:
+                        return CulturalFragment.newInstance();
+                    case 3:
+                        return LiteraryFragment.newInstance();
                     case 4:
-                        return RecyclerViewSportsFragment.newInstance();
+                        return SportsFragment.newInstance();
                     default:
-                        return RecyclerViewFragment.newInstance();
+                        return SportsFragment.newInstance();
                 }
 
             }
