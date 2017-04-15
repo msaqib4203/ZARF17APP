@@ -3,10 +3,10 @@
     android:id="@id/materialviewpager_pagerTitleStrip"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:pstsDividerPadding="20dp"
+    app:pstsDividerWidth="40dp"
     app:pstsIndicatorColor="#FFF"
     app:pstsIndicatorHeight="2dp"
-    app:pstsPaddingMiddle="true"
     app:pstsShouldExpand="true"
     app:pstsTabPaddingLeftRight="10dp"
-    app:pstsTabTextAllCaps="true" />
+    app:pstsTabTextAllCaps="true"
+    app:pstsTabTextStyle="normal" />
