@@ -1,6 +1,7 @@
 package cs2k18.com.zarf17;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,8 @@ import com.bumptech.glide.Glide;
 import com.elyeproj.loaderviewlibrary.LoaderImageView;
 
 import java.util.ArrayList;
+
+import me.grantland.widget.AutofitTextView;
 
 /**
  * Created by MSaqib on 26-10-2016.
@@ -38,6 +41,8 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<TestRecyclerVi
     @Override
     public void onBindViewHolder(final MyViewHolder myViewHolder, final int position) {
         Glide.with(context).load(events.get(position).image_url).into(myViewHolder.poster);
+        Typeface type = Typeface.createFromAsset(context.getAssets(),"fonts/BOOKERLY-REGULAR.TTF");
+        myViewHolder.title.setTypeface(type);
 
     }
 
@@ -48,10 +53,12 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<TestRecyclerVi
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         LoaderImageView poster;
+        AutofitTextView title;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             poster = (LoaderImageView) itemView.findViewById(R.id.event_poster);
+            title = (AutofitTextView)itemView.findViewById(R.id.event_name);
         }
     }
 }

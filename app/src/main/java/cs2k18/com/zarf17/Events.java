@@ -29,8 +29,9 @@ public class Events extends DrawerActivity {
         setContentView(R.layout.activity_events);
         setTitle("");
         ButterKnife.bind(this);
-
-
+        /*Typeface type = Typeface.createFromAsset(getAssets(),"BOOKERLY-REGULAR.TTF");
+        TextView tv = (TextView)findViewById(R.id.event_name);
+        tv.setTypeface(type);*/
         final Toolbar toolbar = mViewPager.getToolbar();
         if (toolbar != null) {
             setSupportActionBar(toolbar);
