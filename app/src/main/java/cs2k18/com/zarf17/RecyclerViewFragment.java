@@ -50,8 +50,9 @@ public class RecyclerViewFragment extends Fragment {
 
         final ArrayList<Event> items = new ArrayList<>();
         String sports_event[] = getResources().getStringArray(R.array.sports_events);
+        String sports_name[] = getResources().getStringArray(R.array.sports_events2);
         for (int i = 0; i < 7; ++i) {
-            items.add(new Event(sports_event[i]));
+            items.add(new Event(sports_name[i], sports_event[i]));
         }
 
 

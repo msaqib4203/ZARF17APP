@@ -43,6 +43,7 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<TestRecyclerVi
         Glide.with(context).load(events.get(position).image_url).into(myViewHolder.poster);
         Typeface type = Typeface.createFromAsset(context.getAssets(),"fonts/BOOKERLY-REGULAR.TTF");
         myViewHolder.title.setTypeface(type);
+        myViewHolder.title.setText(events.get(position).name);
 
     }
 

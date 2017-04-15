@@ -40,16 +40,34 @@
         <item>https://msaqib.000webhostapp.com/events/lan_gaming.jpg</item>
         <item>https://msaqib.000webhostapp.com/events/civil_quiz.jpg</item>
         <item>https://msaqib.000webhostapp.com/events/codista_2.jpg</item>
-        <item>https://msaqib.000webhostapp.com/events/IPR_Logo_quiz.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/logo_quiz.jpg</item>
         <item>https://msaqib.000webhostapp.com/events/ipl_action.jpg</item>
-        <item>https://msaqib.000webhostapp.com/events/B_Quiz.jpg</item>
-        <item>https://msaqib.000webhostapp.com/events/Mad_Ad.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/b_quiz.jpg</item>
+        <item>https://msaqib.000webhostapp.com/events/mad_ads.jpg</item>
         <item>https://msaqib.000webhostapp.com/events/B_Plan.jpg</item>
         <item>https://msaqib.000webhostapp.com/events/Chem_quiz.jpg</item>
         <item>https://msaqib.000webhostapp.com/events/Line_Follower.jpg</item>
         <item>https://msaqib.000webhostapp.com/events/Electro_Quiz.jpg</item>
         <item>https://msaqib.000webhostapp.com/events/Tech_Race.jpg</item>
         <item>https://msaqib.000webhostapp.com/events/Social_Conscious_Energy.jpg</item>
+    </string-array>
+
+    <string-array name="tech_events2">
+        <item>paper_presentation.jpg</item>
+        <item>chem_e_car.jpg</item>
+        <item>lan_gaming.jpg</item>
+        <item>civil_quiz.jpg</item>
+        <item>codista_2.jpg</item>
+        <item>logo_quiz.jpg</item>
+        <item>ipl_action.jpg</item>
+        <item>b_quiz.jpg</item>
+        <item>mad_ads.jpg</item>
+        <item>B_Plan.jpg</item>
+        <item>Chem_quiz.jpg</item>
+        <item>Line_Follower.jpg</item>
+        <item>Electro_Quiz.jpg</item>
+        <item>Tech_Race.jpg</item>
+        <item>Social_Conscious_Energy.jpg</item>
     </string-array>
 
     <string-array name="literary_events">
