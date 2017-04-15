@@ -1,9 +1,5 @@
 package cs2k18.com.zarf17;
 
-/**
- * Created by MSaqib on 15-04-2017.
- */
-
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,7 +9,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
 
@@ -23,14 +18,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by MSaqib on 10-04-2017.
+ * Created by HP on 15-04-2017.
  */
 
-/**
- * Created by florentchampigny on 24/04/15.
- */
-public class RecyclerViewSportsFragment extends Fragment {
-
+public class OnlineFragment extends Fragment {
     private static final boolean GRID_LAYOUT = false;
     private static final int ITEM_COUNT = 10;
     public ArrayList<Event> items = new ArrayList<>();
@@ -38,8 +29,8 @@ public class RecyclerViewSportsFragment extends Fragment {
     @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
 
-    public static RecyclerViewSportsFragment newInstance() {
-        return new RecyclerViewSportsFragment();
+    public static OnlineFragment newInstance() {
+        return new OnlineFragment();
     }
 
     @Override
@@ -55,12 +46,14 @@ public class RecyclerViewSportsFragment extends Fragment {
         ButterKnife.bind(this, view);
 
         items.removeAll(items);
-        Toast.makeText(getContext(), String.valueOf(Events.selected_tab), Toast.LENGTH_SHORT).show();
-        String sports_event[] = getResources().getStringArray(R.array.sports_events);
-        String sports_name[] = getResources().getStringArray(R.array.sports_events2);
-        for (int i = 0; i < 7; ++i) {
-            items.add(new Event(sports_name[i], sports_event[i]));
+        //Toast.makeText(getContext(), String.valueOf(Events.selected_tab), Toast.LENGTH_SHORT).show();
+
+        String o_event[] = getResources().getStringArray(R.array.online_events);
+        String o_name[] = getResources().getStringArray(R.array.online_events2);
+        for (int i = 0; i < 13; ++i) {
+            items.add(new Event(o_name[i], o_event[i]));
         }
+
 
         //setup materialviewpager
 
@@ -74,6 +67,5 @@ public class RecyclerViewSportsFragment extends Fragment {
         //Use this now
         mRecyclerView.addItemDecoration(new MaterialViewPagerHeaderDecorator());
         mRecyclerView.setAdapter(new TestRecyclerViewAdapter(items, view.getContext()));
-
     }
 }
