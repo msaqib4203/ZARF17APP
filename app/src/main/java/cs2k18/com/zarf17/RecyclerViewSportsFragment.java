@@ -1,7 +1,7 @@
 package cs2k18.com.zarf17;
 
 /**
- * Created by MSaqib on 10-04-2017.
+ * Created by MSaqib on 15-04-2017.
  */
 
 import android.os.Bundle;
@@ -23,9 +23,13 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
+ * Created by MSaqib on 10-04-2017.
+ */
+
+/**
  * Created by florentchampigny on 24/04/15.
  */
-public class RecyclerViewFragment extends Fragment {
+public class RecyclerViewSportsFragment extends Fragment {
 
     private static final boolean GRID_LAYOUT = false;
     private static final int ITEM_COUNT = 10;
@@ -34,8 +38,8 @@ public class RecyclerViewFragment extends Fragment {
     @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
 
-    public static RecyclerViewFragment newInstance() {
-        return new RecyclerViewFragment();
+    public static RecyclerViewSportsFragment newInstance() {
+        return new RecyclerViewSportsFragment();
     }
 
     @Override
@@ -52,13 +56,11 @@ public class RecyclerViewFragment extends Fragment {
 
         items.removeAll(items);
         Toast.makeText(getContext(), String.valueOf(Events.selected_tab), Toast.LENGTH_SHORT).show();
-
-        String tech_event[] = getResources().getStringArray(R.array.tech_events);
-        String tech_name[] = getResources().getStringArray(R.array.tech_events2);
-        for (int i = 0; i < 15; ++i) {
-            items.add(new Event(tech_name[i], tech_event[i]));
+        String sports_event[] = getResources().getStringArray(R.array.sports_events);
+        String sports_name[] = getResources().getStringArray(R.array.sports_events2);
+        for (int i = 0; i < 7; ++i) {
+            items.add(new Event(sports_name[i], sports_event[i]));
         }
-
 
         //setup materialviewpager
 
@@ -72,5 +74,6 @@ public class RecyclerViewFragment extends Fragment {
         //Use this now
         mRecyclerView.addItemDecoration(new MaterialViewPagerHeaderDecorator());
         mRecyclerView.setAdapter(new TestRecyclerViewAdapter(items, view.getContext()));
+
     }
 }

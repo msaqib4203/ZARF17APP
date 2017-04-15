@@ -16,6 +16,7 @@ import me.grantland.widget.AutofitTextView;
 public class Events extends DrawerActivity {
 
 
+    public static int selected_tab = 0;
     public String events_category[] = {"Online", "Technical", "Cultural", "Literary", "Sports"};
     public int color_id[] = {R.color.green, R.color.blue, R.color.cyan, R.color.red, R.color.lime};
     public int url_string[] = {R.string.url1, R.string.url2, R.string.url3, R.string.url4,
@@ -42,7 +43,13 @@ public class Events extends DrawerActivity {
 
             @Override
             public Fragment getItem(int position) {
-                return RecyclerViewFragment.newInstance();
+                switch (position % 5) {
+                    case 4:
+                        return RecyclerViewSportsFragment.newInstance();
+                    default:
+                        return RecyclerViewFragment.newInstance();
+                }
+
             }
 
             @Override
@@ -62,6 +69,7 @@ public class Events extends DrawerActivity {
         mViewPager.setMaterialViewPagerListener(new MaterialViewPager.Listener() {
             @Override
             public HeaderDesign getHeaderDesign(int page) {
+                selected_tab = page;
                 final AutofitTextView textView = (AutofitTextView) findViewById(R.id.logo_white);
                 textView.setText(events_category[page].toUpperCase() + " EVENTS");
                 return HeaderDesign.fromColorResAndUrl(color_id[page], getString(url_string[page]));
