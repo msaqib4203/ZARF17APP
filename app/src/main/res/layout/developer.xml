@@ -19,17 +19,14 @@
         <RelativeLayout
             android:id="@+id/linearLayoutCardContent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#EFEFEF"
-            android:orientation="vertical">
-            <!--By Mark Gurney [CC BY 3.0 (http://creativecommons.org/licenses/by/3.0)], via Wikimedia Commons -->
+            android:layout_height="wrap_content">
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/white_imageView"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="8dp"
-                android:src="@drawable/white" />
+                android:src="@drawable/black" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/imageView"
@@ -39,78 +36,49 @@
                 android:layout_marginTop="13dp"
                 android:src="@drawable/blank_dp" />
 
-            <LinearLayout
-                android:id="@+id/toggler_layout"
+            <TextView
+                android:id="@+id/dev_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/imageView"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="NAME"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/dev_name"
-                    android:layout_width="298dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/imageView"
-                    android:layout_marginTop="5sp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="NAME"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
-
-                <ImageView
-                    android:id="@+id/imageViewExpand"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:background="@android:color/transparent"
-                    android:contentDescription="@string/details"
-                    android:src="@mipmap/more" />
-            </LinearLayout>
-
-
-            <RelativeLayout
-                android:id="@+id/linearLayoutDetails"
+            <TextView
+                android:id="@+id/batch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_below="@id/toggler_layout"
-                android:layout_centerHorizontal="true"
-                android:orientation="vertical"
-                android:visibility="gone">
+                android:layout_below="@id/dev_name"
+                android:text="Computer Engineering 2018"
+                android:textAlignment="center"
+                android:textColor="#EEEEEE"
+                android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/batch"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Computer Engineering 2018"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/dev_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/dev_github"
+                android:layout_marginRight="34dp"
+                android:layout_toLeftOf="@+id/white_imageView"
+                android:layout_toStartOf="@+id/white_imageView"
+                android:src="@drawable/facebok" />
 
-                <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/dev_facebook"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginBottom="11dp"
-                    android:layout_marginLeft="130dp"
-                    android:layout_marginStart="130dp"
-                    android:src="@drawable/facebok" />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/dev_github"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/dev_name"
+                android:layout_marginBottom="21dp"
+                android:layout_marginLeft="34dp"
+                android:layout_toEndOf="@+id/white_imageView"
+                android:layout_toRightOf="@+id/white_imageView"
+                android:src="@drawable/github" />
 
-                <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/dev_github"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/dev_facebook"
-                    android:layout_marginLeft="34dp"
-                    android:layout_marginStart="34dp"
-                    android:layout_toEndOf="@+id/dev_facebook"
-                    android:layout_toRightOf="@+id/dev_facebook"
-                    android:src="@drawable/github" />
-            </RelativeLayout>
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

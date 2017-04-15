@@ -11,5 +11,6 @@ public class Event {
     public Event(String name, String image_url) {
         this.name = name;
         this.image_url = image_url;
+        this.image_url = "https://msaqib.000webhostapp.com/events/" + name.replaceAll(" ", "_").toLowerCase() + ".jpg";
     }
 }

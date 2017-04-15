@@ -79,7 +79,7 @@ public class Events extends DrawerActivity {
             public HeaderDesign getHeaderDesign(int page) {
                 selected_tab = page;
                 final AutofitTextView textView = (AutofitTextView) findViewById(R.id.logo_white);
-                textView.setText(events_category[page].toUpperCase() + " EVENTS");
+                textView.setText(events_category[page].toUpperCase());
                 return HeaderDesign.fromColorResAndUrl(color_id[page], getString(url_string[page]));
             }
         });

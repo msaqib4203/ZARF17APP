@@ -20,8 +20,8 @@ public class OurTeam extends AppCompatActivity {
             "Mohd. Faisal Noor","Saiful Wali Khan","Mohd. Shavez Khan","Mohd. Yaqzan","Taha Waseem",
             "Mohd. Zubair","Anas Abdullah","Iffat Alam","Mohd. Bilal Khan Sherwani","Saiful Haque","Mohd. Amir Khan",
             "Mohd. Faizan","Kunaal Khemani","Danish Khan","Arsam Naim","Zeeshan Shahab","Osama Aslam"};
-    public String post[] = {"Convener","Co-Convener","Girl's Coordinator","Girl's Co-Coordinator","Cultural Coordinator","Cultural Co-Coordinator",
-            "Literary Coordinator","Literary Co-Coordinator","Technical Coordinator","Technical Co-Coordinator",
+    public String post[] = {"Convener", "Co-Convener", "Girl's Coordinator", "Girl's Co-Coordinator", "Literary Coordinator", "Literary Co-Coordinator",
+            "Cultural Coordinator", "Cultural Co-Coordinator", "Technical Coordinator", "Technical Co-Coordinator",
             "Coordinator, Q.Incharge","Co-Coordinator, Q.Incharge","Sports Coordinator","Sports Co-Coordinator","DC, Coordinator",
             "Creative Coordinator","Creative Co-Coordinator","P.R.O","EDC Coordinator","EDC Co-Coordinator","Online Coordinator"};
     public String mob[] = {"8979849800", "9456865614", "N/A", "N/A", "7895167747", "7535040540", "9528243119", "7417725973",
@@ -29,8 +29,8 @@ public class OurTeam extends AppCompatActivity {
     "9045179288","9045674714","8791410956","9045759481"};
     public int images[] = {R.drawable.team_1, R.drawable.team_2, R.drawable.team_3, R.drawable.team_4, R.drawable.team_5,
             R.drawable.team_6, R.drawable.team_7, R.drawable.team_8, R.drawable.team_9, R.drawable.team_10, R.drawable.team_11, R.drawable.blank_dp,
-            R.drawable.team_13, R.drawable.blank_dp, R.drawable.team_15, R.drawable.team_16, R.drawable.team_17, R.drawable.team_18, R.drawable.team_19,
-            R.drawable.team_20, R.drawable.team_21};
+            R.drawable.team_13, R.drawable.blank_dp, R.drawable.team_15, R.drawable.team_16, R.drawable.team_17, R.drawable.team_18, R.drawable.team_20,
+            R.drawable.team_19, R.drawable.team_21};
     RecyclerView recyclerView;
     MyAdapter myAdapter;
     @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
