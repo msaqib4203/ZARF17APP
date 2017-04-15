@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -43,7 +43,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         myViewHolder.designation.setText(members.get(position).post);
         myViewHolder.title.setText(members.get(position).name);
         myViewHolder.contact_info.setText(members.get(position).contact);
-        Picasso.with(context).load(members.get(position).url).placeholder(R.drawable.blank_dp).into(myViewHolder.photo);
+        Glide.with(context).load(members.get(position).url).placeholder(R.drawable.blank_dp)
+                .error(R.drawable.blank_dp).into(myViewHolder.photo);
     }
 
     @Override
