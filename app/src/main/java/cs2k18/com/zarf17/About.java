@@ -30,7 +30,7 @@ public class About extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     Intent fbintent = new Intent(Intent.ACTION_VIEW);
-                    fbintent.setData(Uri.parse("https://zarf.co.in/online/fb"));
+                    fbintent.setData(Uri.parse("https://zarf.co.in/"));
                     startActivity(fbintent);
                 } catch (Exception e) {
                 }
@@ -42,7 +42,7 @@ public class About extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     Intent fbintent = new Intent(Intent.ACTION_VIEW);
-                    fbintent.setData(Uri.parse("https://fb.com/zarf17"));
+                    fbintent.setData(Uri.parse("https://instagram.com/zarf17"));
                     startActivity(fbintent);
                 } catch (Exception e) {
                 }
@@ -54,7 +54,7 @@ public class About extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     Intent fbintent = new Intent(Intent.ACTION_VIEW);
-                    fbintent.setData(Uri.parse("https://instagram.com/zarf17"));
+                    fbintent.setData(Uri.parse("https://fb.com/zarf17"));
                     startActivity(fbintent);
                 } catch (Exception e) {
                 }

@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toast.makeText(this, "Good internet connectivity is required", Toast.LENGTH_LONG).show();
         txtTimerDay = (TextView) findViewById(R.id.txtTimerDay);
         txtTimerHour = (TextView) findViewById(R.id.txtTimerHour);
         txtTimerMinute = (TextView) findViewById(R.id.txtTimerMinute);
@@ -281,8 +282,8 @@ public class MainActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... params) {
             try {
-                Document doc = Jsoup.connect("https://msaqib.000webhostapp.com/events/query.php?name=" + name + "&contact=" + email +
-                        "&feedback=" + feedback).timeout(8000).get();
+                Document doc = Jsoup.connect("https://zarf.co.in/send.php?name=" + name + "&email=" + email +
+                        "&message=" + feedback).timeout(8000).get();
                 response = doc.outerHtml();
 
             } catch (Exception e) {
