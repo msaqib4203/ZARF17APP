@@ -6,22 +6,16 @@ package cs2k18.com.zarf17;
 
 public class Developer {
 
-    public int image;
+    public String image;
     public String facebook_url;
     public String github_url;
     public String name;
 
     public Developer(String a, int b, String c, String d) {
         name = a;
-        image = b;
+        image = "https://msaqib.000webhostapp.com/developers/" + a.replaceAll(" ", "_").toLowerCase() + ".jpg";
         facebook_url = c;
         github_url = d;
     }
 
-    public Developer(String a, int b, String c) {
-        name = a;
-        image = b;
-        facebook_url = c;
-        github_url = null;
-    }
 }

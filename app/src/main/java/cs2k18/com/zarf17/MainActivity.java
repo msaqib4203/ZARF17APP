@@ -3,6 +3,7 @@ package cs2k18.com.zarf17;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -26,8 +27,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.daimajia.slider.library.SliderLayout;
-import com.daimajia.slider.library.SliderTypes.BaseSliderView;
-import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.gjiazhe.panoramaimageview.GyroscopeObserver;
 import com.gjiazhe.panoramaimageview.PanoramaImageView;
 
@@ -36,7 +35,6 @@ import org.jsoup.nodes.Document;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
 /** mergin test by msaqib*/
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -120,26 +118,7 @@ public class MainActivity extends AppCompatActivity
         Animation animation = AnimationUtils.loadAnimation(this,R.anim.fadein);
         cardView1.startAnimation(animation);
         panoramaImageView1.setGyroscopeObserver(gyroscopeObserver);
-        mDemoSlider = (SliderLayout)findViewById(R.id.slider);
-        HashMap<String,Integer> file_maps = new HashMap<String, Integer>();
-        file_maps.put("poster2",R.drawable.poster2);
-        file_maps.put("poster3",R.drawable.poster3);
 
-        for(String name : file_maps.keySet()){
-            TextSliderView textSliderView = new TextSliderView(this);
-            // initialize a SliderLayout
-            textSliderView
-                    .description(name)
-                    .image(file_maps.get(name))
-                    .setScaleType(BaseSliderView.ScaleType.Fit);
-
-            //add your extra information
-            textSliderView.bundle(new Bundle());
-            textSliderView.getBundle()
-                    .putString("extra",name);
-
-            mDemoSlider.addSlider(textSliderView);
-        }
 
         //panoramaImageView2.setGyroscopeObserver(gyroscopeObserver);
         //panoramaImageView3.setGyroscopeObserver(gyroscopeObserver);
@@ -190,12 +169,32 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.about_app) {
+            LayoutInflater layoutInflater = getLayoutInflater();
+            new AlertDialog.Builder(this)
+                    .setView(layoutInflater.inflate(R.layout.dialog_layout2, null))
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                        }
+                    })
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+            return true;
+        }
+
+        if (id == R.id.rate_app) {
+            try {
+                Intent intent1 = new Intent(Intent.ACTION_VIEW);
+                intent1.setData(Uri.parse("market://details?id=cs2k18.com.zarf17"));
+                startActivity(intent1);
+            } catch (Exception e) {
+            }
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
+
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override

@@ -43,8 +43,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         myViewHolder.designation.setText(members.get(position).post);
         myViewHolder.title.setText(members.get(position).name);
         myViewHolder.contact_info.setText(members.get(position).contact);
-        Glide.with(context).load(members.get(position).url).placeholder(R.drawable.blank_dp)
-                .error(R.drawable.blank_dp).into(myViewHolder.photo);
+        try {
+            Glide.with(context).load(members.get(position).url)
+                    .error(R.drawable.blank_dp).into(myViewHolder.photo);
+        } catch (Exception e) {
+
+        }
     }
 
     @Override

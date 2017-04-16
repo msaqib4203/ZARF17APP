@@ -5,6 +5,8 @@ package cs2k18.com.zarf17;
  */
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,7 +14,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -44,16 +47,31 @@ public class DevAdapter extends RecyclerView.Adapter<DevAdapter.MyViewHolder> {
         myViewHolder.facebook_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, developers.get(position).name + " FACEBOOK", Toast.LENGTH_SHORT).show();
+                try {
+                    Intent fbintent = new Intent(Intent.ACTION_VIEW);
+                    fbintent.setData(Uri.parse(developers.get(position).facebook_url));
+                    context.startActivity(fbintent);
+                } catch (Exception e) {
+                }
             }
         });
 
         myViewHolder.github_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, developers.get(position).name + " GITHUB", Toast.LENGTH_SHORT).show();
+                try {
+                    Intent fbintent = new Intent(Intent.ACTION_VIEW);
+                    fbintent.setData(Uri.parse(developers.get(position).github_url));
+                    context.startActivity(fbintent);
+                } catch (Exception e) {
+                }
             }
         });
+        try {
+            Glide.with(context).load(developers.get(position).image).error(R.drawable.blank_dp).into(myViewHolder.imageView);
+        } catch (Exception e) {
+
+        }
 
     }
 

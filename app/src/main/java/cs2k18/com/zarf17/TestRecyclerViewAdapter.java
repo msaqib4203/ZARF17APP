@@ -1,7 +1,6 @@
 package cs2k18.com.zarf17;
 
 import android.content.Context;
-import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,9 +40,11 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<TestRecyclerVi
     @Override
     public void onBindViewHolder(final MyViewHolder myViewHolder, final int position) {
         Glide.with(context).load(events.get(position).image_url).into(myViewHolder.poster);
-        Typeface type = Typeface.createFromAsset(context.getAssets(),"fonts/BOOKERLY-REGULAR.TTF");
-        myViewHolder.title.setTypeface(type);
-        myViewHolder.title.setText(events.get(position).name);
+        //Typeface type = Typeface.createFromAsset(context.getAssets(),"fonts/BOOKERLY-REGULAR.TTF");
+        //myViewHolder.title.setTypeface(type);
+
+        //myViewHolder.title.setText(events.get(position).name);
+
 
     }
 

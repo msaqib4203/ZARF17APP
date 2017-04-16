@@ -54,7 +54,7 @@
 
     <string-array name="tech_events2">
         <item>Paper Presentation</item>
-        <item>Chem-e-Car</item>
+        <item>Chem e Car</item>
         <item>Lan Gaming</item>
         <item>Civil Quiz</item>
         <item>Codista 2.0</item>
@@ -85,6 +85,21 @@
         <item>https://msaqib.000webhostapp.com/events/ZHCET_Thank_You_Notes.jpg</item>
     </string-array>
 
+    <string-array name="facebook_urls">
+        <item>https://fb.com/mohammadsaqib.ahmed</item>
+        <item>https://fb.com/hash.geek</item>
+        <item>https://fb.com/amanvars</item>
+        <item>https://fb.com/vanshika.varshney.399</item>
+        <item>https://fb.com/huzaiafakhan30</item>
+    </string-array>
+
+    <string-array name="github_urls">
+        <item>http://github.com/msaqib4203</item>
+        <item>http://github.com/hash-14</item>
+        <item>http://github.com/msaqib4203</item>
+        <item>http://github.com/vanvar</item>
+        <item>http://github.com/</item>
+    </string-array>
     <string-array name="literary_events2">
         <item>Debate</item>
         <item>General Quiz</item>
@@ -101,19 +116,19 @@
     </string-array>
 
     <string-array name="online_events">
-        <item>https://msaqib.000webhostapp.com/events/Class_ka_Dealer.jpg</item>
-        <item>https://msaqib.000webhostapp.com/events/Hero_and_Heroine.jpg</item>
-        <item>https://msaqib.000webhostapp.com/events/Squad.jpg</item>
-        <item>https://msaqib.000webhostapp.com/events/Caught_with_Proxy.jpg</item>
-        <item>https://msaqib.000webhostapp.com/events/Late_to_class.jpg</item>
-        <item>https://msaqib.000webhostapp.com/events/Woh_Ajnabee.jpg</item>
-        <item>https://msaqib.000webhostapp.com/events/Post_with_min_likes.jpg</item>
-        <item>https://msaqib.000webhostapp.com/events/Selfie_Master.jpg</item>
-        <item>https://msaqib.000webhostapp.com/events/Candid_Photography.jpg</item>
-        <item>https://msaqib.000webhostapp.com/events/AMU_Favourite_Campus_Place.jpg</item>
-        <item>https://msaqib.000webhostapp.com/events/Night_Photography.jpg</item>
-        <item>https://msaqib.000webhostapp.com/events/Microtales.jpg</item>
-        <item>https://msaqib.000webhostapp.com/events/Most_no_of_people_in_a_selfie.jpg</item>
+        <item>0</item>
+        <item>1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>0</item>
+        <item>0</item>
+        <item>1</item>
+        <item>0</item>
+        <item>0</item>
+        <item>1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>0</item>
     </string-array>
 
     <string-array name="online_events2">
@@ -161,19 +176,25 @@
         <item>Fast and Furious</item>
         <item>Bullet Raja</item>
         <item>Firing Squad</item>
-        <item>Bazaar-e-Zarf</item>
-        <item>Cosplan</item>
+        <item>Bazaar e Zarf</item>
+        <item>Cosplay</item>
         <item>Vezeto</item>
-        <item>Ad Mads</item>
+        <item>Ad Mad</item>
         <item>Treasure Hunt</item>
         <item>Best Buddy</item>
         <item>Aqua Torpedo</item>
-        <item>Soduko</item>
+        <item>Sudoku</item>
         <item>Rangoli Making</item>
         <item>Dumb Charades</item>
         <item>Solo Singing</item>
     </string-array>
 
+    <string name="about_app">
+        This is an offical Android app of Zarf\'17. This app provides us the following features :
+        Provides a detailed description of every events to be held in Zarf\'17.
+Sends notification to the user about the events that will take place in Zarf\'17.
+Stay tuned for more!
+    </string>
     <string name="url1">http://blog.meraevents.com/wp-content/uploads/2015/10/Photography-b.jpg</string>
     <string name="url2">http://i0.wp.com/eventmagazine.townscript.com/wp-content/uploads/2016/04/workshops11.png?fit=1080%2C9999</string>
     <string name="url3">http://cbit.ac.in/files/synapse/dance.jpg</string>
