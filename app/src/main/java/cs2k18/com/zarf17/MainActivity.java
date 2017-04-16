@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity
                 try {
                     SimpleDateFormat dateFormat = new SimpleDateFormat(
                             "yyyy-MM-dd");
-                    Date futureDate = dateFormat.parse("2017-04-17");
+                    Date futureDate = dateFormat.parse("2017-04-26");
                     Date currentDate = new Date();
                     if (!currentDate.after(futureDate)) {
                         long diff = futureDate.getTime()
@@ -80,8 +80,8 @@ public class MainActivity extends AppCompatActivity
                         txtTimerSecond.setText(""
                                 + String.format("%02d", seconds));
                     } else {
-                        tvEvent.setVisibility(View.VISIBLE);
-                        tvEvent.setText("The event started!");
+                        //tvEvent.setVisibility(View.VISIBLE);
+                        //tvEvent.setText("The event started!");
                         textViewGone();
                     }
                 } catch (Exception e) {
@@ -254,7 +254,8 @@ public class MainActivity extends AppCompatActivity
             name_msg = (EditText) dialog.findViewById(R.id.query_name);
             feedback_msg = (EditText) dialog.findViewById(R.id.query_feedback);
             return true;
-
+        } else if(id == R.id.nav_about){
+            startActivity(new Intent(this,About.class));
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
