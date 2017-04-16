@@ -207,9 +207,9 @@ Stay tuned for more info....</string>
 Sends notification to the user about the events that will take place in Zarf\'17.
 Stay tuned for more!
     </string>
-    <string name="url1">http://blog.meraevents.com/wp-content/uploads/2015/10/Photography-b.jpg</string>
-    <string name="url2">http://i0.wp.com/eventmagazine.townscript.com/wp-content/uploads/2016/04/workshops11.png?fit=1080%2C9999</string>
-    <string name="url3">http://cbit.ac.in/files/synapse/dance.jpg</string>
-    <string name="url4">http://www.literarychicago.com/wp-content/uploads/2014/12/Holiday-Mic.jpg</string>
-    <string name="url5">https://www.topmba.com/sites/default/files/styles/panopoly_image_original/public/mba_in_sports_management_tab1.jpg?itok=LEajbSv7</string>
+    <string name="url1">https://msaqib.000webhostapp.com/events/header1.jpg</string>
+    <string name="url2">https://msaqib.000webhostapp.com/events/header2.jpg</string>
+    <string name="url3">https://msaqib.000webhostapp.com/events/header3.jpg</string>
+    <string name="url4">https://msaqib.000webhostapp.com/events/header4.jpg</string>
+    <string name="url5">https://msaqib.000webhostapp.com/events/header5.jpg</string>
 </resources>
