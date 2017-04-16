@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Toast;
 
 import com.github.florent37.materialviewpager.MaterialViewPager;
 import com.github.florent37.materialviewpager.header.HeaderDesign;
@@ -28,6 +29,7 @@ public class Events extends DrawerActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
+        Toast.makeText(this, "Loading Please Wait...", Toast.LENGTH_SHORT).show();
         setTitle("");
         ButterKnife.bind(this);
         /*Typeface type = Typeface.createFromAsset(getAssets(),"BOOKERLY-REGULAR.TTF");

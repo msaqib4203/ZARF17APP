@@ -21,6 +21,7 @@ public class Developers extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_developers);
+        developers.removeAll(developers);
         facebook_url = getResources().getStringArray(R.array.facebook_urls);
         github_url = getResources().getStringArray(R.array.github_urls);
         for (int i = 0; i < 5; i++)

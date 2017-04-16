@@ -39,7 +39,8 @@
         android:theme="@style/AppTheme.Base">
     </activity>
         <activity android:name=".About"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
         </activity>
     <activity
         android:name=".OurTeam"

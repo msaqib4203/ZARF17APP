@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Zarf2k17</string>
-    <string name="title_activity_main2">ZARF 2017</string>
+    <string name="app_name">ZARF 17</string>
+    <string name="title_activity_main2">ZARF 17</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -27,14 +27,7 @@
     <string name="header">About Us</string>
     <string name="description">Zarf\'17, the annual cultural festival organized by Zakir Hussain College of Enginering and Technology,Aligarh, AMU, will be held from 27th and 28th April,2017. Zarf\’17, with the theme “Youth on the move” is definitely going to be huge this year. One of the biggest cultural fests of Uttar Pradesh, Zarf\'17 will be a two days extravaganza holding various interesting events like music, drama, games and sports, technical events and much more.
 Zarf\'17 has attracted major sponsors and extensive media coverage over the years. The team of Zarf\'17 consists of student volunteers, event organisers, technical coordinator,discipline committe,etc. who work to promote creativity and intellectualism, and it symbolizes a place to be together and celebrate.
-A lot of competitive events will be held throughout the two days of Zarf\'17. Competitions are held pre-dominantly in the genres of  Music, Fine Arts, Indoor Sports, Film and Photography (Digital), Literature, Debating ,Quizzing and other cultural and technical events.
-
-
-Welcome Note
-This is an offical Android app of Zarf\'17. This app provides us the following features :
-Provides a detailed description of every events to be held in Zarf\'17.
-Sends notification to the user about the events that will take place in Zarf\'17.
-Stay tuned for more info....</string>
+A lot of competitive events will be held throughout the two days of Zarf\'17. Competitions are held pre-dominantly in the genres of  Music, Fine Arts, Indoor Sports, Film and Photography (Digital), Literature, Debating ,Quizzing and other cultural and technical events.</string>
 
     <string-array name="sports_events2">
         <item>Badminton</item>
@@ -102,15 +95,15 @@ Stay tuned for more info....</string>
         <item>https://fb.com/hash.geek</item>
         <item>https://fb.com/amanvars</item>
         <item>https://fb.com/vanshika.varshney.399</item>
-        <item>https://fb.com/huzaiafakhan30</item>
+        <item>https://fb.com/huzaifakhan30</item>
     </string-array>
 
     <string-array name="github_urls">
         <item>http://github.com/msaqib4203</item>
         <item>http://github.com/hash-14</item>
-        <item>http://github.com/msaqib4203</item>
+        <item>http://github.com/amanvars</item>
         <item>http://github.com/vanvar</item>
-        <item>http://github.com/</item>
+        <item>http://github.com/huzaifakhan30</item>
     </string-array>
     <string-array name="literary_events2">
         <item>Debate</item>
@@ -205,6 +198,7 @@ Stay tuned for more info....</string>
         This is an offical Android app of Zarf\'17. This app provides us the following features :
         Provides a detailed description of every events to be held in Zarf\'17.
 Sends notification to the user about the events that will take place in Zarf\'17.
+        Good internet connectivity is required for loading images.
 Stay tuned for more!
     </string>
     <string name="url1">https://msaqib.000webhostapp.com/events/header1.jpg</string>

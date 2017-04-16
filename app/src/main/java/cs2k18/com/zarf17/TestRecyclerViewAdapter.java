@@ -39,7 +39,10 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<TestRecyclerVi
 
     @Override
     public void onBindViewHolder(final MyViewHolder myViewHolder, final int position) {
-        Glide.with(context).load(events.get(position).image_url).into(myViewHolder.poster);
+        try {
+            Glide.with(context).load(events.get(position).image_url).into(myViewHolder.poster);
+        } catch (Exception e) {
+        }
         //Typeface type = Typeface.createFromAsset(context.getAssets(),"fonts/BOOKERLY-REGULAR.TTF");
         //myViewHolder.title.setTypeface(type);
 

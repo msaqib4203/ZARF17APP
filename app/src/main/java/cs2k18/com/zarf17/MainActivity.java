@@ -24,7 +24,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.daimajia.slider.library.SliderLayout;
 import com.gjiazhe.panoramaimageview.GyroscopeObserver;
@@ -44,6 +43,7 @@ public class MainActivity extends AppCompatActivity
     EditText name, contact, query;
     AlertDialog.Builder builder;
     SliderLayout mDemoSlider;
+    boolean first = true;
     private TextView txtTimerDay, txtTimerHour, txtTimerMinute, txtTimerSecond;
     private TextView tvEvent;
     private Handler handler;
@@ -94,7 +94,6 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toast.makeText(this, "Good internet connectivity is required", Toast.LENGTH_LONG).show();
         txtTimerDay = (TextView) findViewById(R.id.txtTimerDay);
         txtTimerHour = (TextView) findViewById(R.id.txtTimerHour);
         txtTimerMinute = (TextView) findViewById(R.id.txtTimerMinute);
@@ -284,7 +283,7 @@ public class MainActivity extends AppCompatActivity
             try {
                 Document doc = Jsoup.connect("https://zarf.co.in/send.php?name=" + name + "&email=" + email +
                         "&message=" + feedback).timeout(8000).get();
-                response = doc.outerHtml();
+                //response = doc.outerHtml();
 
             } catch (Exception e) {
                 success = false;
@@ -296,7 +295,8 @@ public class MainActivity extends AppCompatActivity
         protected void onPostExecute(Void aVoid) {
 
             if (success) {
-                Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
+                CoordinatorLayout cd = (CoordinatorLayout) findViewById(R.id.cd);
+                Snackbar.make(cd, "Thank you for your feedback..!", Snackbar.LENGTH_SHORT).show();
             }
             super.onPostExecute(aVoid);
 

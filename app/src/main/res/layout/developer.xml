@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -75,8 +76,8 @@
                 android:layout_marginRight="34dp"
                 android:layout_toLeftOf="@+id/white_imageView"
                 android:layout_toStartOf="@+id/white_imageView"
-                android:backgroundTint="#fff"
-                android:src="@drawable/facebok" />
+                android:src="@drawable/facebok"
+                app:backgroundTint="#fff" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/dev_github"
@@ -87,8 +88,8 @@
                 android:layout_marginLeft="34dp"
                 android:layout_toEndOf="@+id/white_imageView"
                 android:layout_toRightOf="@+id/white_imageView"
-                android:backgroundTint="#fff"
-                android:src="@drawable/github" />
+                android:src="@drawable/github"
+                app:backgroundTint="#fff" />
 
         </RelativeLayout>
     </android.support.v7.widget.CardView>
