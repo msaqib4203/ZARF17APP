@@ -34,7 +34,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="400dp"
                     android:layout_margin="5dp"
-                    android:src="@drawable/qwertyui"
+                    android:src="@drawable/final_poster"
                     app:piv_enablePanoramaMode="true"
                     app:piv_invertScrollDirection="false"
                     app:piv_show_scrollbar="false" />

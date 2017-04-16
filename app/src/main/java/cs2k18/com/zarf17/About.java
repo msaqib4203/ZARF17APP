@@ -30,7 +30,7 @@ public class About extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     Intent fbintent = new Intent(Intent.ACTION_VIEW);
-                    fbintent.setData(Uri.parse("https://zarf.co.in/online"));
+                    fbintent.setData(Uri.parse("https://zarf.co.in/online/fb"));
                     startActivity(fbintent);
                 } catch (Exception e) {
                 }
