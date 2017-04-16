@@ -48,8 +48,9 @@
                 android:id="@+id/dev_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/imageView"
-                android:layout_marginTop="8dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/white_imageView"
                 android:fontFamily="sans-serif-condensed"
                 android:text="NAME"
                 android:textAlignment="center"
@@ -63,7 +64,7 @@
                 android:layout_below="@id/dev_name"
                 android:text="Computer Engineering 2018"
                 android:textAlignment="center"
-                android:textColor="#EEEEEE"
+                android:textColor="#757575"
                 android:textSize="16sp" />
 
             <android.support.design.widget.FloatingActionButton
@@ -74,6 +75,7 @@
                 android:layout_marginRight="34dp"
                 android:layout_toLeftOf="@+id/white_imageView"
                 android:layout_toStartOf="@+id/white_imageView"
+                android:backgroundTint="#fff"
                 android:src="@drawable/facebok" />
 
             <android.support.design.widget.FloatingActionButton
@@ -85,6 +87,7 @@
                 android:layout_marginLeft="34dp"
                 android:layout_toEndOf="@+id/white_imageView"
                 android:layout_toRightOf="@+id/white_imageView"
+                android:backgroundTint="#fff"
                 android:src="@drawable/github" />
 
         </RelativeLayout>

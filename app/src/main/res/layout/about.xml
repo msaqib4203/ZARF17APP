@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:diagonal="http://schemas.android.com/apk/res-auto"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/about"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,12 +7,12 @@
 
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cv1"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
-        android:id="@+id/cv1">
+        android:layout_marginTop="10dp">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -28,89 +25,91 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ABOUT US"
-                android:textStyle="bold"
-                android:layout_marginLeft="8dp"
                 android:layout_alignParentBottom="true"
+                android:layout_marginLeft="8dp"
                 android:gravity="start"
+                android:text="ABOUT US"
                 android:textAlignment="viewStart"
                 android:textColor="#fff"
-                android:textSize="26sp"/>
+                android:textSize="26sp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>
     <android.support.v7.widget.CardView
+        android:id="@+id/cv2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:id="@+id/cv2"
         android:layout_below="@+id/cv1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
         >
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <android.support.design.widget.FloatingActionButton
+                android:id="@+id/zarf_web"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
-                android:src="@drawable/chrome"
-                android:backgroundTint="#fff"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginBottom="3dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:layout_marginTop="3dp"
                 android:layout_toLeftOf="@+id/floatingActionButton"
                 android:layout_toStartOf="@+id/floatingActionButton"
-                android:layout_marginRight="48dp"
-                android:layout_marginEnd="48dp" />
+                android:backgroundTint="#fff"
+                android:src="@drawable/chrome" />
             <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingActionButton"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
-                android:src="@drawable/facebook"
+                android:layout_marginTop="3dp"
                 android:backgroundTint="#fff"
-                android:id="@+id/floatingActionButton" />
+                android:src="@drawable/facebook" />
             <android.support.design.widget.FloatingActionButton
+                android:id="@+id/insta_zarf"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
-                android:src="@drawable/instagram"
-                android:backgroundTint="#fff"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
                 android:layout_alignParentTop="true"
-                android:layout_toRightOf="@+id/floatingActionButton"
-                android:layout_toEndOf="@+id/floatingActionButton"
+                android:layout_marginBottom="3dp"
                 android:layout_marginLeft="53dp"
-                android:layout_marginStart="53dp" />
+                android:layout_marginStart="53dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@+id/floatingActionButton"
+                android:layout_toRightOf="@+id/floatingActionButton"
+                android:backgroundTint="#fff"
+                android:src="@drawable/instagram" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_below="@id/cv2"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@id/cv2">
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cv3"
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
-        android:id="@+id/cv3"
+        android:layout_marginTop="10dp"
         >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingBottom="10dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:paddingBottom="10dp"
                 android:text="@string/description"
                 android:textColor="#000"
-                android:textSize="18sp"
-                android:fontFamily="sans-serif-condensed"/>
+                android:textSize="18sp" />
     </android.support.v7.widget.CardView>
     </ScrollView>
 
