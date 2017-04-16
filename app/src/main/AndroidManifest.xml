@@ -38,6 +38,9 @@
         android:parentActivityName=".MainActivity"
         android:theme="@style/AppTheme.Base">
     </activity>
+        <activity android:name=".About"
+            android:parentActivityName=".MainActivity">
+        </activity>
     <activity
         android:name=".OurTeam"
         android:label="Our Team"
