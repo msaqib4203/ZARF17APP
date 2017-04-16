@@ -67,9 +67,7 @@ public class Events extends DrawerActivity {
 
             @Override
             public CharSequence getPageTitle(int position) {
-
                 return events_category[position % 5];
-
             }
         });
 
