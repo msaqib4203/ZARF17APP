@@ -30,7 +30,10 @@ public class Developers extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.developer_recyclerview);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), 1, false));
-        devAdapter = new DevAdapter(Developers.this, developers);
-        recyclerView.setAdapter(devAdapter);
+        try {
+            devAdapter = new DevAdapter(Developers.this, developers);
+            recyclerView.setAdapter(devAdapter);
+        } catch (Exception e) {
+        }
     }
 }

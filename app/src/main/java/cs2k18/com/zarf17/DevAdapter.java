@@ -36,9 +36,11 @@ public class DevAdapter extends RecyclerView.Adapter<DevAdapter.MyViewHolder> {
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, final int position) {
+
         View view = inflater.inflate(R.layout.developer, parent, false);
         MyViewHolder holder = new MyViewHolder(view);
         return holder;
+
     }
 
     @Override

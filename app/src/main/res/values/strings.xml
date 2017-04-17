@@ -137,18 +137,12 @@ A lot of competitive events will be held throughout the two days of Zarf\'17. Co
     </string-array>
 
     <string-array name="online_events2">
-        <item>Class ka Dealer</item>
-        <item>Hero and Heroine</item>
-        <item>Squad of the Year</item>
-        <item>Caught with Proxy</item>
-        <item>Late to Class</item>
-        <item>Woh Ajnabee</item>
-        <item>Post with minimum likes</item>
         <item>Selfie Master</item>
         <item>Candid Photography</item>
         <item>AMU Favourite Campus Place</item>
         <item>Night Photography</item>
         <item>Microtales</item>
+        <item>Post with minimum likes</item>
         <item>Most no of people in a selfie</item>
     </string-array>
 
@@ -195,10 +189,10 @@ A lot of competitive events will be held throughout the two days of Zarf\'17. Co
     </string-array>
 
     <string name="about_app">
-        This is an offical Android app of Zarf\'17. This app provides us the following features :
-        Provides a detailed description of every events to be held in Zarf\'17.
-Sends notification to the user about the events that will take place in Zarf\'17.
-        Good internet connectivity is required for loading images.
+        This is the official Android app of ZARF\'17. This app provides us the following features :
+        Provides a detailed description of every event to be held in ZARF\'17.
+Sends notification to the user about the events that will take place in ZARF\'17.
+        Good internet connectivity is required for loading images.\n
 Stay tuned for more!
     </string>
     <string name="url1">https://msaqib.000webhostapp.com/events/header1.jpg</string>

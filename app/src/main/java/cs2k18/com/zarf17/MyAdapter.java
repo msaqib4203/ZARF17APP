@@ -1,6 +1,9 @@
 package cs2k18.com.zarf17;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,8 +50,22 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             Glide.with(context).load(members.get(position).url)
                     .error(R.drawable.blank_dp).into(myViewHolder.photo);
         } catch (Exception e) {
-
         }
+
+        myViewHolder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    if (members.get(position).contact != "N/A") {
+                        Intent intent = new Intent(Intent.ACTION_DIAL);
+                        intent.setData(Uri.parse("tel:" + members.get(position).contact));
+                        context.startActivity(intent);
+                    }
+                } catch (Exception e) {
+                }
+            }
+        });
+
     }
 
     @Override
@@ -61,6 +78,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         TextView designation;
         CircleImageView photo;
         TextView contact_info;
+        CardView cardView;
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -68,6 +86,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             designation = (TextView) itemView.findViewById(R.id.designation);
             photo = (CircleImageView) itemView.findViewById(R.id.team_photo);
             contact_info = (TextView) itemView.findViewById(R.id.contact_no);
+            cardView = (CardView) itemView.findViewById(R.id.fmember);
         }
     }
 }

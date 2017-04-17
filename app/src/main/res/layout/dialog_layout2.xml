@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="2dp"
         android:fontFamily="sans-serif-condensed"
+        android:padding="3dp"
         android:text="@string/about_app"
         android:textSize="17sp" />
 </LinearLayout>

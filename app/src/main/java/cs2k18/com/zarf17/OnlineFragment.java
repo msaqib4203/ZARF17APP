@@ -50,7 +50,7 @@ public class OnlineFragment extends Fragment {
 
         String o_event[] = getResources().getStringArray(R.array.online_events);
         String o_name[] = getResources().getStringArray(R.array.online_events2);
-        for (int i = 0; i < 13; ++i) {
+        for (int i = 0; i < 7; ++i) {
             items.add(new Event(o_name[i], o_event[i]));
         }
 

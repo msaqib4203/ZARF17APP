@@ -1,10 +1,12 @@
 package cs2k18.com.zarf17;
 
 import android.content.Context;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.elyeproj.loaderviewlibrary.LoaderImageView;
@@ -43,6 +45,13 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<TestRecyclerVi
             Glide.with(context).load(events.get(position).image_url).into(myViewHolder.poster);
         } catch (Exception e) {
         }
+
+        myViewHolder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context, "Description will be available soon!", Toast.LENGTH_SHORT).show();
+            }
+        });
         //Typeface type = Typeface.createFromAsset(context.getAssets(),"fonts/BOOKERLY-REGULAR.TTF");
         //myViewHolder.title.setTypeface(type);
 
@@ -59,11 +68,14 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<TestRecyclerVi
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         LoaderImageView poster;
         AutofitTextView title;
+        CardView cardView;
+
 
         public MyViewHolder(View itemView) {
             super(itemView);
             poster = (LoaderImageView) itemView.findViewById(R.id.event_poster);
             title = (AutofitTextView)itemView.findViewById(R.id.event_name);
+            cardView = (CardView) itemView.findViewById(R.id.card_view_event);
         }
     }
 }

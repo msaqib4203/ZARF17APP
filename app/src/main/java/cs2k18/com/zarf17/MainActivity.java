@@ -25,7 +25,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.daimajia.slider.library.SliderLayout;
 import com.gjiazhe.panoramaimageview.GyroscopeObserver;
 import com.gjiazhe.panoramaimageview.PanoramaImageView;
 
@@ -40,12 +39,8 @@ public class MainActivity extends AppCompatActivity
     EditText email_msg = null, name_msg = null, feedback_msg = null;
     PanoramaImageView panoramaImageView1;
     CardView cardView1;
-    EditText name, contact, query;
     AlertDialog.Builder builder;
-    SliderLayout mDemoSlider;
-    boolean first = true;
     private TextView txtTimerDay, txtTimerHour, txtTimerMinute, txtTimerSecond;
-    private TextView tvEvent;
     private Handler handler;
     private Runnable runnable;
     private GyroscopeObserver gyroscopeObserver;
@@ -208,7 +203,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_team) {
             startActivity(new Intent(this,OurTeam.class));
         } else if (id == R.id.nav_developer) {
-            startActivity(new Intent(this,Developers.class));
+            try {
+                startActivity(new Intent(this, Developers.class));
+            } catch (Exception e) {
+
+            }
         } else if (id == R.id.nav_query) {
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
@@ -281,7 +280,7 @@ public class MainActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... params) {
             try {
-                Document doc = Jsoup.connect("https://zarf.co.in/send.php?name=" + name + "&email=" + email +
+                Document doc = Jsoup.connect("http://zarf.co.in/send.php?name=" + name + "&email=" + email +
                         "&message=" + feedback).timeout(8000).get();
                 //response = doc.outerHtml();
 
