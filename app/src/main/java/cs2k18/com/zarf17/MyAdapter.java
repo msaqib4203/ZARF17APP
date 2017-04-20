@@ -48,7 +48,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         myViewHolder.contact_info.setText(members.get(position).contact);
         try {
             Glide.with(context).load(members.get(position).url)
-                    .error(R.drawable.blank_dp).into(myViewHolder.photo);
+                    .error(R.mipmap.blank_dp).into(myViewHolder.photo);
         } catch (Exception e) {
         }
 

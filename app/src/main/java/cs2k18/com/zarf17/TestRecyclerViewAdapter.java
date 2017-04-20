@@ -13,8 +13,6 @@ import com.elyeproj.loaderviewlibrary.LoaderImageView;
 
 import java.util.ArrayList;
 
-import me.grantland.widget.AutofitTextView;
-
 /**
  * Created by MSaqib on 26-10-2016.
  */
@@ -56,7 +54,21 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<TestRecyclerVi
         //myViewHolder.title.setTypeface(type);
 
         //myViewHolder.title.setText(events.get(position).name);
+  /*      myViewHolder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context,Description.class);
 
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                if(Build.VERSION.SDK_INT>=21) {
+                    Pair pair = new Pair(myViewHolder.poster, myViewHolder.poster.getTransitionName());
+                    ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation((Events) context, pair);
+                    context.startActivity(intent, options.toBundle());
+                }else
+                    context.startActivity(intent);
+            }
+        });
+*/
 
     }
 
@@ -67,14 +79,13 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<TestRecyclerVi
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         LoaderImageView poster;
-        AutofitTextView title;
+
         CardView cardView;
 
 
         public MyViewHolder(View itemView) {
             super(itemView);
             poster = (LoaderImageView) itemView.findViewById(R.id.event_poster);
-            title = (AutofitTextView)itemView.findViewById(R.id.event_name);
             cardView = (CardView) itemView.findViewById(R.id.card_view_event);
         }
     }

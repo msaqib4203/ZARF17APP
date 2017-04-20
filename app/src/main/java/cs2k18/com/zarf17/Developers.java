@@ -13,7 +13,7 @@ public class Developers extends AppCompatActivity {
     public RecyclerView recyclerView;
     public DevAdapter devAdapter;
     private String dev_names[] = {"Mohammad Saqib", "Hashir Ahmad", "Aman Varshney", "Vanshika Varshney", "Abu Huzaifa Khan"};
-    private int images_id[] = {R.drawable.blank_dp};
+    private int images_id[] = {R.mipmap.blank_dp};
     private String facebook_url[];
     private String github_url[];
 

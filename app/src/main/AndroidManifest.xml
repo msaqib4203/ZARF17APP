@@ -47,6 +47,9 @@
         android:label="Our Team"
         android:parentActivityName=".MainActivity"
         android:theme="@style/AppTheme.Base" />
+        <activity
+            android:name=".Description"
+            android:parentActivityName=".Events" />
         <activity android:name=".TabActivity">
             <intent-filter>
                 <action android:name="notifc_TARGET"></action>

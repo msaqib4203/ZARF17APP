@@ -70,7 +70,7 @@ public class DevAdapter extends RecyclerView.Adapter<DevAdapter.MyViewHolder> {
             }
         });
         try {
-            Glide.with(context).load(developers.get(position).image).error(R.drawable.blank_dp).into(myViewHolder.imageView);
+            Glide.with(context).load(developers.get(position).image).error(R.mipmap.blank_dp).into(myViewHolder.imageView);
         } catch (Exception e) {
 
         }
