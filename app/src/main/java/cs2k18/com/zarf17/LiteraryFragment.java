@@ -50,8 +50,8 @@ public class LiteraryFragment extends Fragment {
 
         String l_event[] = getResources().getStringArray(R.array.literary_events);
         String l_name[] = getResources().getStringArray(R.array.literary_events2);
-        for (int i = 0; i < 12; ++i) {
-            items.add(new Event(l_name[i], l_event[i]));
+        for (int i = 0; i < 16; ++i) {
+            items.add(new Event(l_name[i], "x"));
         }
 
 

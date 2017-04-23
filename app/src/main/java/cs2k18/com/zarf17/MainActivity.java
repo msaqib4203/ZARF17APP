@@ -200,6 +200,20 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_events) {
             //Toast.makeText(this,"Will be updated soon....!", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(this,Events.class));
+        } else if (id == R.id.rate_app_menu) {
+            try {
+                Intent intent1 = new Intent(Intent.ACTION_VIEW);
+                intent1.setData(Uri.parse("market://details?id=cs2k18.com.zarf17"));
+                startActivity(intent1);
+            } catch (Exception e) {
+            }
+        } else if (id == R.id.more_apps_menu) {
+            try {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("market://search?q=pub:CS2K18 ZHCET"));
+                startActivity(intent);
+            } catch (Exception e) {
+            }
         } else if (id == R.id.nav_team) {
             startActivity(new Intent(this,OurTeam.class));
         } else if (id == R.id.nav_developer) {

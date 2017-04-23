@@ -54,8 +54,8 @@ public class TechnicalFragment extends Fragment {
 
         String tech_event[] = getResources().getStringArray(R.array.tech_events);
         String tech_name[] = getResources().getStringArray(R.array.tech_events2);
-        for (int i = 0; i < 15; ++i) {
-            items.add(new Event(tech_name[i], tech_event[i]));
+        for (int i = 0; i < 25; ++i) {
+            items.add(new Event(tech_name[i], "x"));
         }
 
 
